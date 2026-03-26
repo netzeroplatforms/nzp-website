@@ -167,7 +167,9 @@ h1.hero-h1 em{font-style:normal;color:#7dd3fc}
   .screen-panels{grid-template-columns:1fr !important;gap:8px !important;}
   .screen-chart, .screen-outputs{padding:10px !important;}
   .screen-main{padding:12px !important;}
-  .chart-bars{height:100px !important;}
+  .chart-bars{height:120px !important;align-items:flex-end !important;}
+  .chart-bars > div{height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-end !important;align-items:center !important;}
+  .chart-bars .bar{width:100% !important;}
 }
 .screen-sidebar{
   background:var(--slate-50);border-right:1px solid var(--slate-200);
