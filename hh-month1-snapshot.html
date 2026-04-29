@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HH Global × BridgePoint AI — Month 1 Engagement Snapshot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1F3F;
+      --navy-mid: #152D55;
+      --navy-light: #1E3A6E;
+      --gold: #C5A25B;
+      --gold-light: #D4B76E;
+      --gold-dim: rgba(197,162,91,0.10);
+      --cream: #FAF8F5;
+      --cream-dark: #F0EDE7;
+      --text: #1A1A2E;
+      --text-mid: #4A5568;
+      --text-light: #718096;
+      --border: #E2DDD5;
+      --white: #FFFFFF;
+      --green: #276749;
+      --green-bg: #F0FFF4;
+      --green-border: #9AE6B4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 20px;
+    }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(11,31,63,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 40px 48px 32px;
+      position: relative;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .brand h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    .brand .sub {
+      font-size: 0.82em;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .meta-block {
+      text-align: right;
+    }
+    .meta-block .badge {
+      display: inline-block;
+      background: rgba(197,162,91,0.18);
+      border: 1px solid rgba(197,162,91,0.4);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.78em;
+      color: var(--gold-light);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .meta-block .date {
+      font-size: 0.82em;
+      color: rgba(255,255,255,0.55);
+      display: block;
+    }
+    .header-desc {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 18px;
+      font-size: 0.97em;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+    }
+    .gold-bar {
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
+    }
+
+    /* BODY */
+    .body { padding: 40px 48px; }
+
+    /* SUMMARY STATS */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .stat-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+    .stat-card .lbl {
+      font-size: 0.73em;
+      color: rgba(255,255,255,0.65);
+      margin-top: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    /* SECTION HEADER */
+    .section-label {
+      font-size: 0.7em;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25em;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    /* WORK PACKAGES */
+    .wp-list { display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px; }
+    .wp {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .wp-head {
+      background: var(--cream);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .wp-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 0.75em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .wp-head h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.93em;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .wp-head .wp-status {
+      margin-left: auto;
+      font-size: 0.72em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .status-live { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+    .status-done { background: #EBF8FF; color: #2B6CB0; border: 1px solid #90CDF4; }
+    .wp-body { padding: 16px 20px; }
+    .wp-items { list-style: none; }
+    .wp-items li {
+      font-size: 0.87em;
+      color: var(--text-mid);
+      padding: 5px 0 5px 18px;
+      position: relative;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .wp-items li:last-child { border-bottom: none; }
+    .wp-items li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .wp-items li strong { color: var(--text); font-weight: 600; }
+    .wp-url {
+      margin-top: 10px;
+      font-size: 0.78em;
+      color: var(--text-light);
+      font-family: 'Inter', monospace;
+    }
+    .wp-url a { color: var(--navy-light); text-decoration: none; }
+    .wp-url a:hover { text-decoration: underline; }
+
+    /* DELIVERABLES TABLE */
+    .deliverables-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 36px;
+      font-size: 0.86em;
+    }
+    .deliverables-table th {
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 0.7em;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .deliverables-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+      vertical-align: top;
+    }
+    .deliverables-table tr:last-child td { border-bottom: none; }
+    .deliverables-table tr:nth-child(even) td { background: var(--cream); }
+    .tag {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 10px;
+      font-size: 0.78em;
+      font-weight: 600;
+    }
+    .tag-live { background: var(--green-bg); color: var(--green); }
+    .tag-done { background: #EBF8FF; color: #2B6CB0; }
+    .tag-hh { background: var(--gold-dim); color: #744210; }
+    .tag-nzp { background: #EBF8FF; color: #1A365D; }
+
+    /* FORWARD LOOK */
+    .forward {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--gold);
+      margin-bottom: 32px;
+    }
+    .forward h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05em;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .forward ul { list-style: none; }
+    .forward ul li {
+      font-size: 0.88em;
+      color: var(--text-mid);
+      padding: 4px 0 4px 18px;
+      position: relative;
+    }
+    .forward ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy);
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer .left {
+      font-size: 0.83em;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer .left strong {
+      color: var(--white);
+      display: block;
+      font-size: 0.95em;
+      margin-bottom: 2px;
+    }
+    .footer .right {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.45);
+      text-align: right;
+    }
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 28px 0;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <div class="header-top">
+        <div class="brand">
+          <h1>HH Global Holdings</h1>
+          <div class="sub">Engagement Snapshot · Month 1</div>
+        </div>
+        <div class="meta-block">
+          <div class="badge">Confidential</div>
+          <span class="date">April 2026</span>
+        </div>
+      </div>
+      <div class="header-desc">
+        Prepared by BridgePoint AI (Mark Evans-Smith, BD Director) for Sam White, CEO — HH Global Holdings.<br>
+        Summary of deliverables completed across digital infrastructure, BD collateral, and technology platforms in Month 1.
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+
+    <div class="body">
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="num">5</span>
+          <div class="lbl">Work Packages Delivered</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">8</span>
+          <div class="lbl">Live URLs / Assets</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">2</span>
+          <div class="lbl">Client Engagements Supported</div>
+        </div>
+        <div class="stat-card">
+          <span class="num">1</span>
+          <div class="lbl">Technology Platform Calibrated</div>
+        </div>
+      </div>
+
+      <div class="section-label">Deliverables</div>
+      <div class="section-title">Work Packages — Month 1</div>
+
+      <div class="wp-list">
+
+        <div class="wp">
+          <div class="wp-head">
+            <div class="wp-num">1</div>
+            <h3>HH Global Holdings — Corporate Website (Phase 1)</h3>
+            <span class="wp-status status-live">Live</span>
+          </div>
+          <div class="wp-body">
+            <ul class="wp-items">
+              <li>Full 6-page corporate website built and deployed to GitHub Pages</li>
+              <li><strong>4 new forensic service verticals</strong> added: Environmental Consultancies, Family Law Solicitors, Criminal Defence Firms, Drug Discovery Companies</li>
+              <li>UTF-8 encoding corruption resolved across 4 pages</li>
+              <li>Navigation links fixed site-wide; LinkedIn removed per brand guidelines</li>
+              <li>Office address corrected to 73 Cornhill, London</li>
+              <li>Footer added to index.html; cross-links built between all pages</li>
+              <li>samuel.html biography corrected (forensic section removed)</li>
+              <li>Canonical URL spelling: tracey.html → tracy.html (all links updated)</li>
+            </ul>
+            <div class="wp-url">Live: <a href="https://netzeroplatforms.github.io/Hh-global-website/" target="_blank">netzeroplatforms.github.io/Hh-global-website/</a></div>
+          </div>
+        </div>
+
+        <div class="wp">
+          <div class="wp-head">
+            <div class="wp-num">2</div>
+            <h3>LabArchitect — Product Page &amp; BD One-Pager</h3>
+            <span class="wp-status status-live">Live</span>
+          </div>
+          <div class="wp-body">
+            <ul class="wp-items">
+              <li><strong>labarchitect.html</strong> — full branded product page (HH navy/gold, Playfair Display) with feature breakdown, client ROI framing, and CTA</li>
+              <li><strong>labarchitect-onepager.html</strong> — print-ready BD one-pager for partnership conversations</li>
+              <li>Integrated into index.html body as a featured CTA: "Explore LabArchitect →"</li>
+              <li>Not in main nav (kept clean); accessible via direct URL and body link</li>
+            </ul>
+            <div class="wp-url">
+              Product page: <a href="https://netzeroplatforms.github.io/Hh-global-website/labarchitect.html" target="_blank">…/labarchitect.html</a><br>
+              One-pager: <a href="https://netzeroplatforms.github.io/Hh-global-website/labarchitect-onepager.html" target="_blank">…/labarchitect-onepager.html</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="wp">
+          <div class="wp-head">
+            <div class="wp-num">3</div>
+            <h3>NZP × HTE Partnership One-Pager</h3>
+            <span class="wp-status status-live">Live</span>
+          </div>
+          <div class="wp-body">
+            <ul class="wp-items">
+              <li>Pitch document designed for Hydrogen Transition Energy (HTE) engagement</li>
+              <li>Covers Manston modelling offer (44,000 tpa), Cwmbran/Birmingham/Perth/Belfast pipeline</li>
+              <li>Iterated against <strong>Richard Molsbee (CTO) feedback</strong>: partner strip updated (AlterNrg, SMS Group, Tenova, GE Vernova, Siemens, Air Products, Air Liquide, AON, BP, Marathon, Tenaska Biofuels), InEnTec veteran framing sharpened, contrast/branding improved</li>
+              <li>Enhanced with: UK ETS carbon pricing (£47/t), EBITDA footnote, objection pre-emption, competitor positioning section, 3-step engagement pathway</li>
+              <li>Deployed to both Hh-global-website and nzp-website repositories</li>
+            </ul>
+            <div class="wp-url">Live: <a href="https://netzeroplatforms.github.io/Hh-global-website/NZP-HTE-OnePager.html" target="_blank">…/NZP-HTE-OnePager.html</a></div>
+          </div>
+        </div>
+
+        <div class="wp">
+          <div class="wp-head">
+            <div class="wp-num">4</div>
+            <h3>NetZeroPlatforms — Corporate Website Enhancement</h3>
+            <span class="wp-status status-done">Updated</span>
+          </div>
+          <div class="wp-body">
+            <ul class="wp-items">
+              <li><strong>Trust bar / partners:</strong> AlterNrg, SMS Group, Tenova, GE Vernova, Siemens, Air Products, Air Liquide, AON, BP, Marathon, Tenaska Biofuels (Hitachi/Westinghouse removed)</li>
+              <li><strong>Richard Molsbee bio</strong> updated with verified commercial (Toxco, InEnTec, Hanjung) and government (US DoE, NASA, US EPA) programme credentials</li>
+              <li><strong>Mark Evans-Smith title</strong> corrected to Chief Growth Officer throughout</li>
+              <li>Key messaging from NZP-HTE one-pager embedded into main site (ETS badge, output flexibility, financial assumptions, offtake specificity)</li>
+            </ul>
+            <div class="wp-url">Live: <a href="https://netzeroplatforms.github.io/nzp-website/" target="_blank">netzeroplatforms.github.io/nzp-website/</a></div>
+          </div>
+        </div>
+
+        <div class="wp">
+          <div class="wp-head">
+            <div class="wp-num">5</div>
+            <h3>NZP Syngas Optimisation Tool — EC73.0 Calibration</h3>
+            <span class="wp-status status-live">Live</span>
+          </div>
+          <div class="wp-body">
+            <ul class="wp-items">
+              <li>Engineering model cross-referenced against <strong>EC73.0 reference spreadsheet</strong> (Plastic &amp; C&amp;D Mix calibration feedstock)</li>
+              <li><strong>MSW Average profile</strong> added with per-profile syngasRatio override (1.357, matching Richard's 84→114 t/day reference)</li>
+              <li><strong>Dual unit display</strong> added throughout (Imperial US tons + Metric tonnes) per Richard's feedback</li>
+              <li>Tipping fee updated to $60/t (Richard's mid-2025 US market data); CAPEX updated to $487k/tpd (Jonathan Watt's £30M/$40M for 30,000 t/yr model)</li>
+              <li>Steam gasification mass-addition correctly modelled via syngasRatio; LHV-based scaling preserved for Plastic/C&amp;D calibration family</li>
+            </ul>
+            <div class="wp-url">Tool: <a href="http://204.168.161.165:8080/" target="_blank">204.168.161.165:8080</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="divider">
+
+      <div class="section-label">Assets Delivered</div>
+      <div class="section-title">Full Deliverables Inventory</div>
+
+      <table class="deliverables-table">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Type</th>
+            <th>Client</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Corporate website — 6 pages (index, company, forensic-services, samuel, philippe, tracy)</td>
+            <td>Website</td>
+            <td><span class="tag tag-hh">HH Global</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>labarchitect.html — LabArchitect product page</td>
+            <td>Product page</td>
+            <td><span class="tag tag-hh">HH Global</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>labarchitect-onepager.html — LabArchitect BD one-pager</td>
+            <td>BD collateral</td>
+            <td><span class="tag tag-hh">HH Global</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>NZP-HTE-OnePager.html — HTE partnership pitch</td>
+            <td>BD collateral</td>
+            <td><span class="tag tag-nzp">NZP</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>NZP corporate website — partners, bios, messaging update</td>
+            <td>Website</td>
+            <td><span class="tag tag-nzp">NZP</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>NZP Syngas Tool — EC73.0 calibration + MSW Average profile</td>
+            <td>Platform</td>
+            <td><span class="tag tag-nzp">NZP</span></td>
+            <td><span class="tag tag-live">Live</span></td>
+          </tr>
+          <tr>
+            <td>Dual unit display (Imperial / Metric) in syngas tool</td>
+            <td>Feature</td>
+            <td><span class="tag tag-nzp">NZP</span></td>
+            <td><span class="tag tag-done">Done</span></td>
+          </tr>
+          <tr>
+            <td>This engagement snapshot report</td>
+            <td>Report</td>
+            <td><span class="tag tag-hh">HH Global</span></td>
+            <td><span class="tag tag-done">Done</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="forward">
+        <h3>Forward Look — Month 2 Pipeline</h3>
+        <ul>
+          <li>HTE engagement follow-up: model run on Manston waste profile, investor-grade outputs</li>
+          <li>Cwmbran site modelling — NZP configuration scoping</li>
+          <li>HH Global website Phase 2 (additional service verticals, case studies)</li>
+          <li>Weekly snapshot updates to this report</li>
+          <li>LabArchitect: target 2–3 qualified BD conversations from digital collateral</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="left">
+        <strong>Mark Evans-Smith</strong>
+        BD Director (via BridgePoint AI) · HH Global Holdings
+      </div>
+      <div class="right">
+        Confidential — for internal use<br>
+        Updated: April 2026
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
