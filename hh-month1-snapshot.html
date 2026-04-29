@@ -254,6 +254,64 @@
     .tag-live { background: var(--green-bg); color: var(--green); }
     .tag-done { background: #EBF8FF; color: #2B6CB0; }
 
+    /* PROSPECT CARDS */
+    .prospect-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
+    .prospect-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+    .prospect-left {
+      background: var(--navy);
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .prospect-left .p-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1em;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .prospect-left .p-sector {
+      font-size: 0.72em;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .p-stage {
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 12px;
+      width: fit-content;
+    }
+    .stage-early { background: rgba(197,162,91,0.2); color: var(--gold-light); border: 1px solid rgba(197,162,91,0.35); }
+    .stage-call { background: #C6F6D5; color: #22543D; }
+    .prospect-right { padding: 20px 22px; background: var(--white); }
+    .prospect-right .p-context {
+      font-size: 0.87em;
+      color: var(--text-mid);
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+    .prospect-right .p-next {
+      font-size: 0.8em;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+    .prospect-right .p-next strong { color: var(--navy); font-weight: 600; }
+
     /* FORWARD LOOK */
     .forward {
       background: var(--cream);
@@ -356,8 +414,8 @@
           <div class="lbl">BD Assets Published</div>
         </div>
         <div class="stat-card">
-          <span class="num">1</span>
-          <div class="lbl">Product Launched Online</div>
+          <span class="num">2</span>
+          <div class="lbl">Active Prospects in Pipeline</div>
         </div>
       </div>
 
@@ -427,6 +485,47 @@
 
       <hr class="divider">
 
+      <div class="section-label">Business Development</div>
+      <div class="section-title">Active Prospect Pipeline — Month 1</div>
+
+      <div class="prospect-grid">
+
+        <div class="prospect-card">
+          <div class="prospect-left">
+            <div class="p-name">Al Maktoum Family Office</div>
+            <div class="p-sector">Equine &amp; Camel Science</div>
+            <span class="p-stage stage-early">Initial Engagement</span>
+          </div>
+          <div class="prospect-right">
+            <div class="p-context">
+              High-value introduction to the Al Maktoum Family Office covering camel science and performance. Initial email exchanges and insight sharing underway — positioning HH Global's specialist forensic and analytical capabilities in the context of elite animal science programmes.
+            </div>
+            <div class="p-next">
+              <strong>Next step:</strong> Deepen insight exchange; identify specific analytical or forensic requirements within their camel programme; progress toward a scoping conversation.
+            </div>
+          </div>
+        </div>
+
+        <div class="prospect-card">
+          <div class="prospect-left">
+            <div class="p-name">Hysteron</div>
+            <div class="p-sector">Commercial Laboratory</div>
+            <span class="p-stage stage-call">Call Scheduled</span>
+          </div>
+          <div class="prospect-right">
+            <div class="p-context">
+              Hysteron operate a commercial laboratory and have entered active dialogue with HH Global. A discovery call has been arranged to explore how HH Global's capabilities and services can support or augment their existing lab operations — whether through consultancy, analytical services, or a partnership model.
+            </div>
+            <div class="p-next">
+              <strong>Next step:</strong> Conduct discovery call; establish scope of Hysteron's needs; identify the most relevant HH Global service offering (LabArchitect, forensic services, or managed programme).
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="divider">
+
       <div class="section-label">Assets Delivered</div>
       <div class="section-title">Full Deliverables Inventory</div>
 
@@ -480,9 +579,10 @@
       <div class="forward">
         <h3>Forward Look — Month 2</h3>
         <ul>
+          <li><strong>Hysteron:</strong> Discovery call — scope their lab needs and define HH Global service fit</li>
+          <li><strong>Al Maktoum FO:</strong> Advance insight exchange toward a structured scoping conversation on camel science programme requirements</li>
           <li>Phase 2 website content — additional service verticals and case study additions</li>
           <li>BD collateral expansion: sector-specific one-pagers for priority client verticals</li>
-          <li>LabArchitect: target 2–3 qualified BD conversations from digital collateral</li>
           <li>Weekly updates to this snapshot report</li>
         </ul>
       </div>
