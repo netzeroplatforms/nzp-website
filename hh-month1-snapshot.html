@@ -297,6 +297,29 @@
     }
     .stage-early { background: rgba(197,162,91,0.2); color: var(--gold-light); border: 1px solid rgba(197,162,91,0.35); }
     .stage-call { background: #C6F6D5; color: #22543D; }
+    .stage-advisor { background: #EBF8FF; color: #1A365D; border: 1px solid #90CDF4; }
+    .stage-evaluator { background: rgba(197,162,91,0.15); color: #744210; border: 1px solid rgba(197,162,91,0.4); }
+    .bd-sub-label {
+      font-size: 0.68em;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin: 0 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .bd-group { margin-bottom: 24px; }
+    .validation-note {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.85em;
+      color: var(--text-mid);
+      margin-bottom: 0;
+    }
+    .validation-note strong { color: var(--navy); }
     .prospect-right { padding: 20px 22px; background: var(--white); }
     .prospect-right .p-context {
       font-size: 0.87em;
@@ -414,8 +437,8 @@
           <div class="lbl">BD Assets Published</div>
         </div>
         <div class="stat-card">
-          <span class="num">2</span>
-          <div class="lbl">Active Prospects in Pipeline</div>
+          <span class="num">5+</span>
+          <div class="lbl">Active BD Engagements</div>
         </div>
       </div>
 
@@ -486,39 +509,97 @@
       <hr class="divider">
 
       <div class="section-label">Business Development</div>
-      <div class="section-title">Active Prospect Pipeline — Month 1</div>
+      <div class="section-title">Engagements &amp; Pipeline — Month 1</div>
 
       <div class="prospect-grid">
 
-        <div class="prospect-card">
-          <div class="prospect-left">
-            <div class="p-name">Al Maktoum Family Office</div>
-            <div class="p-sector">Equine &amp; Camel Science</div>
-            <span class="p-stage stage-early">Initial Engagement</span>
-          </div>
-          <div class="prospect-right">
-            <div class="p-context">
-              High-value introduction to the Al Maktoum Family Office covering camel science and performance. Initial email exchanges and insight sharing underway — positioning HH Global's specialist forensic and analytical capabilities in the context of elite animal science programmes.
+        <!-- STRATEGIC ADVISORS -->
+        <div class="bd-group">
+          <div class="bd-sub-label">Strategic Advisors &amp; Network</div>
+
+          <div class="prospect-grid" style="margin-bottom:0;">
+
+            <div class="prospect-card">
+              <div class="prospect-left">
+                <div class="p-name">Katherine Ireland</div>
+                <div class="p-sector">Strategic Advisor</div>
+                <span class="p-stage stage-advisor">Advisor Confirmed</span>
+              </div>
+              <div class="prospect-right">
+                <div class="p-context">
+                  Ex-BP Board, PE and Family Office Executive and Non-Executive. Katherine has agreed to assist HH Global in positioning its IP portfolio within the PE-backed health space. She brings strong networks across the UAE and the broader Family Office ecosystem, and has expressed a keen interest in supporting the Al Maktoum Camel work specifically. Katherine also identified the US as a strong potential market for collaboration.
+                </div>
+                <div class="p-next">
+                  <strong>Next step:</strong> Define the scope of Katherine's advisory role across (1) PE-backed health positioning, (2) UAE/FO introductions for Camel programme, (3) US collaboration pathways.
+                </div>
+              </div>
             </div>
-            <div class="p-next">
-              <strong>Next step:</strong> Deepen insight exchange; identify specific analytical or forensic requirements within their camel programme; progress toward a scoping conversation.
+
+            <div class="prospect-card">
+              <div class="prospect-left">
+                <div class="p-name">Andrew Roddam</div>
+                <div class="p-sector">Introducer · Evaluator · Advisor</div>
+                <span class="p-stage stage-evaluator">Active — Critical</span>
+              </div>
+              <div class="prospect-right">
+                <div class="p-context">
+                  A potentially critical strategic figure engaged in an introducer, evaluator, and advisor capacity. Andrew brings significant weight to HH Global's positioning and is being developed as a key part of the advisory and introduction network.
+                </div>
+                <div class="p-next">
+                  <strong>Next step:</strong> Progress engagement; establish the specific areas where Andrew's role as introducer and evaluator can be formalised or deepened.
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <div class="prospect-card">
-          <div class="prospect-left">
-            <div class="p-name">Hysteron</div>
-            <div class="p-sector">Commercial Laboratory</div>
-            <span class="p-stage stage-call">Call Scheduled</span>
+        <!-- ACTIVE PROSPECTS -->
+        <div class="bd-group">
+          <div class="bd-sub-label">Active Prospects</div>
+
+          <div class="prospect-grid" style="margin-bottom:0;">
+
+            <div class="prospect-card">
+              <div class="prospect-left">
+                <div class="p-name">Al Maktoum Family Office</div>
+                <div class="p-sector">Camel Science</div>
+                <span class="p-stage stage-early">Initial Engagement</span>
+              </div>
+              <div class="prospect-right">
+                <div class="p-context">
+                  High-value engagement with the Al Maktoum Family Office around camel science and performance programmes. Initial email exchanges and insight sharing are active. HH Global's specialist forensic and analytical capabilities are being positioned as directly relevant. Katherine Ireland has confirmed she is keen to support this track and can open further doors within the UAE/FO ecosystem. US collaboration interest has also been flagged.
+                </div>
+                <div class="p-next">
+                  <strong>Next step:</strong> Deepen insight exchange; identify specific analytical requirements within the camel programme; leverage Katherine Ireland's FO network to accelerate introductions.
+                </div>
+              </div>
+            </div>
+
+            <div class="prospect-card">
+              <div class="prospect-left">
+                <div class="p-name">Hysteron</div>
+                <div class="p-sector">Commercial Laboratory</div>
+                <span class="p-stage stage-call">Call Scheduled</span>
+              </div>
+              <div class="prospect-right">
+                <div class="p-context">
+                  Hysteron operate a commercial laboratory and have entered active dialogue with HH Global. A discovery call has been arranged to explore how HH Global's capabilities can support or augment their existing lab operations — whether through consultancy, analytical services, LabArchitect deployment, or a managed programme model.
+                </div>
+                <div class="p-next">
+                  <strong>Next step:</strong> Conduct discovery call; establish scope of Hysteron's needs; identify most relevant HH Global service fit.
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="prospect-right">
-            <div class="p-context">
-              Hysteron operate a commercial laboratory and have entered active dialogue with HH Global. A discovery call has been arranged to explore how HH Global's capabilities and services can support or augment their existing lab operations — whether through consultancy, analytical services, or a partnership model.
-            </div>
-            <div class="p-next">
-              <strong>Next step:</strong> Conduct discovery call; establish scope of Hysteron's needs; identify the most relevant HH Global service offering (LabArchitect, forensic services, or managed programme).
-            </div>
+        </div>
+
+        <!-- MARKET VALIDATION -->
+        <div class="bd-group" style="margin-bottom:0;">
+          <div class="bd-sub-label">Market Validation</div>
+          <div class="validation-note">
+            <strong>Website review panel engaged.</strong> A cross-sector group of clinical, non-clinical, pharmaceutical, and research professionals were engaged to review the HH Global website. Feedback gathered across messaging clarity, service positioning, and audience relevance — informing ongoing content and BD collateral development.
           </div>
         </div>
 
@@ -579,10 +660,12 @@
       <div class="forward">
         <h3>Forward Look — Month 2</h3>
         <ul>
-          <li><strong>Hysteron:</strong> Discovery call — scope their lab needs and define HH Global service fit</li>
-          <li><strong>Al Maktoum FO:</strong> Advance insight exchange toward a structured scoping conversation on camel science programme requirements</li>
-          <li>Phase 2 website content — additional service verticals and case study additions</li>
-          <li>BD collateral expansion: sector-specific one-pagers for priority client verticals</li>
+          <li><strong>Katherine Ireland:</strong> Define advisory scope across PE health positioning, UAE/FO introductions, and US collaboration pathways</li>
+          <li><strong>Andrew Roddam:</strong> Formalise introducer/evaluator role; identify priority introduction targets</li>
+          <li><strong>Hysteron:</strong> Discovery call — scope lab needs and define HH Global service fit</li>
+          <li><strong>Al Maktoum FO:</strong> Advance insight exchange; leverage Katherine Ireland's FO network to accelerate; explore US angle</li>
+          <li>Phase 2 website content — service verticals, case studies, and panel feedback integration</li>
+          <li>BD collateral expansion: sector-specific one-pagers for PE health and FO verticals</li>
           <li>Weekly updates to this snapshot report</li>
         </ul>
       </div>
