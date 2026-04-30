@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net Zero Platforms — Liability to Value</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f0f4f8;
+      padding: 24px 16px;
+    }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, #0c2340 0%, #0d4a7a 60%, #1a6bb5 100%);
+      color: #fff;
+      padding: 40px 48px 32px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .brand { font-size: 1.1em; font-weight: 800; letter-spacing: -0.3px; }
+    .brand span { color: #7dd3fc; }
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.75em;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .header h1 {
+      font-size: 2em;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .header h1 em { font-style: normal; color: #7dd3fc; }
+    .header-sub {
+      font-size: 1.0em;
+      opacity: 0.82;
+      max-width: 580px;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      padding-top: 14px;
+      margin-top: 4px;
+    }
+
+    /* ── BODY ── */
+    .body { padding: 40px 48px; }
+
+    /* ── PROBLEM BLOCK ── */
+    .problem {
+      background: #fff8ed;
+      border-left: 4px solid #d97706;
+      border-radius: 0 10px 10px 0;
+      padding: 22px 24px;
+      margin-bottom: 32px;
+    }
+    .problem-label {
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #b45309;
+      margin-bottom: 8px;
+    }
+    .problem p {
+      font-size: 0.97em;
+      color: #44330a;
+      line-height: 1.7;
+    }
+    .problem p + p { margin-top: 8px; }
+
+    /* ── TWO COL ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 22px;
+    }
+    .card.dark {
+      background: #0f172a;
+      border-color: #1e293b;
+      color: #e2e8f0;
+    }
+    .card h3 {
+      font-size: 0.88em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #1d6fbf;
+      margin-bottom: 12px;
+    }
+    .card.dark h3 { color: #7dd3fc; }
+    .card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .card ul li {
+      font-size: 0.9em;
+      color: #374151;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .card.dark ul li { color: #cbd5e1; }
+    .card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #1d6fbf;
+      font-weight: 700;
+    }
+    .card.dark ul li::before { color: #7dd3fc; }
+
+    /* ── COMMITMENT LADDER ── */
+    .ladder {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-bottom: 28px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    .ladder-step {
+      padding: 18px 16px;
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+    }
+    .ladder-step:last-child { border-right: none; }
+    .ladder-step.active { background: #0f172a; }
+    .step-num {
+      font-size: 1.4em;
+      font-weight: 800;
+      color: #cbd5e1;
+      margin-bottom: 4px;
+    }
+    .ladder-step.active .step-num { color: #7dd3fc; }
+    .step-title {
+      font-size: 0.85em;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+    .ladder-step.active .step-title { color: #fff; }
+    .step-desc { font-size: 0.78em; color: #64748b; line-height: 1.5; }
+    .ladder-step.active .step-desc { color: rgba(255,255,255,0.7); }
+    .step-badge {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.68em;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .ladder-step.active .step-badge {
+      background: rgba(29,111,191,0.25);
+      color: #7dd3fc;
+    }
+
+    /* ── OUTPUTS ── */
+    .outputs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .output {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+    .output-icon { font-size: 1.5em; margin-bottom: 6px; }
+    .output-label { font-size: 0.78em; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+    .output-tag {
+      display: inline-block;
+      font-size: 0.68em;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .output.highlight { background: #0f172a; border-color: #1e293b; }
+    .output.highlight .output-label { color: #7dd3fc; }
+    .output.highlight .output-tag { background: rgba(29,111,191,0.25); color: #93c5fd; }
+
+    /* ── TECH BAR ── */
+    .tech-bar {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .tech-bar-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 8px;
+      background: #1d6fbf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1em;
+      font-weight: 800;
+    }
+    .tech-bar-label {
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1d6fbf;
+      margin-bottom: 4px;
+    }
+    .tech-bar p { font-size: 0.87em; color: #1e3a5f; line-height: 1.6; }
+
+    /* ── PROOF ── */
+    .proof {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .proof-label {
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #166534;
+      margin-bottom: 8px;
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .proof-item { font-size: 0.84em; color: #166534; line-height: 1.5; }
+    .proof-item strong { display: block; font-size: 0.85em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; color: #14532d; }
+
+    /* ── OBJECTIONS ── */
+    .objections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .objection {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .obj-q { font-size: 0.82em; font-weight: 700; color: #374151; margin-bottom: 5px; }
+    .obj-a { font-size: 0.82em; color: #64748b; line-height: 1.55; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #0f172a;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand { font-size: 0.9em; font-weight: 700; color: #7dd3fc; }
+    .footer-contact { font-size: 0.82em; color: rgba(255,255,255,0.6); }
+    .footer-contact a { color: #7dd3fc; text-decoration: none; }
+    .footer-note { font-size: 0.75em; color: rgba(255,255,255,0.35); width: 100%; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 680px) {
+      .body, .header { padding: 28px 24px; }
+      .two-col, .ladder, .outputs, .objections, .proof-grid { grid-template-columns: 1fr; }
+      .footer { padding: 20px 24px; }
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="brand">Net Zero <span>Platforms</span></div>
+      <div class="badge">Confidential · For Discussion</div>
+    </div>
+    <h1>From <em>perpetual liability</em><br>to commercial asset.</h1>
+    <p class="header-sub">NZP converts legacy waste streams — coal spoil, IBA, PFAS — into syngas, recoverable metals and vitrified slag, using ultra-high temperature submerged arc gasification. The feedstock comes to us with payment attached. The operator exits the liability entirely.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- PROBLEM -->
+    <div class="problem">
+      <div class="problem-label">The problem operators are paying to ignore</div>
+      <p>Coal operators, municipal incinerators and industrial sites across the US, UK and Europe are carrying open-ended environmental liabilities — acid mine drainage treatment at $500k–$5m+ per site per year, Clean Water Act penalties at up to $60,000/day/violation, SMCRA bonding shortfalls, IBA disposal gate fees, PFAS stockpile obligations. These are not one-off fines. They are perpetual, compounding costs with no natural exit.</p>
+      <p>Regulators are tightening. ESG litigation is rising. The operators cannot grow their way out. They need a credible balance sheet solution — not a technology pitch.</p>
+    </div>
+
+    <!-- WHAT NZP DOES -->
+    <div class="two-col">
+      <div class="card">
+        <h3>What NZP does</h3>
+        <ul>
+          <li>Structures a <strong>liability transfer agreement</strong> — NZP takes the feedstock obligation off the operator's balance sheet</li>
+          <li>Converts the waste stream into <strong>clean syngas</strong> (50–55% H₂, 45–50% CO), recoverable metals and vitrified inert slag</li>
+          <li>The operator's existing <strong>financial reserves</strong> held against the liability serve as project working capital</li>
+          <li>Outputs sold into <strong>contracted offtake</strong> — grid-injectable SNG, hydrogen, or SAF via Fischer-Tropsch</li>
+        </ul>
+      </div>
+      <div class="card dark">
+        <h3>What this means for the operator</h3>
+        <ul>
+          <li>Open-ended liability <strong>capped and removed</strong> from the balance sheet</li>
+          <li>Ongoing penalty and treatment costs <strong>eliminated</strong></li>
+          <li>Financial reserves previously locked against the liability <strong>released</strong></li>
+          <li>Regulatory exposure <strong>transferred</strong> to NZP under a structured SPV/JV</li>
+          <li>No capital outlay required — the liability reserve <strong>is the working capital</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- COMMITMENT LADDER -->
+    <p style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#64748b;margin-bottom:10px">The capital commitment ladder — no plant spend until Model 4</p>
+    <div class="ladder">
+      <div class="ladder-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Model</div>
+        <div class="step-desc">Site data run through the NZP platform. Real commercial outputs. Zero cost.</div>
+        <span class="step-badge">No cost · No commitment</span>
+      </div>
+      <div class="ladder-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Optimise</div>
+        <div class="step-desc">Quick-win improvements to existing operations. Minimal capital.</div>
+        <span class="step-badge">Minimal capital</span>
+      </div>
+      <div class="ladder-step">
+        <div class="step-num">03</div>
+        <div class="step-title">De-risk</div>
+        <div class="step-desc">Pilot alongside existing operations. Build board and regulator confidence.</div>
+        <span class="step-badge">No capital leap</span>
+      </div>
+      <div class="ladder-step active">
+        <div class="step-num">04</div>
+        <div class="step-title">Invest</div>
+        <div class="step-desc">Full plant deployment. Capital deploys here — with offtake already contracted.</div>
+        <span class="step-badge">Offtake secured</span>
+      </div>
+    </div>
+
+    <!-- OUTPUTS -->
+    <p style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#64748b;margin-bottom:10px">Commercial outputs — near-term to long-term</p>
+    <div class="outputs">
+      <div class="output highlight">
+        <div class="output-icon">⚡</div>
+        <div class="output-label">Power</div>
+        <span class="output-tag">Near-term</span><br>
+        <span class="output-tag" style="margin-top:4px">Lowest CAPEX</span>
+      </div>
+      <div class="output highlight">
+        <div class="output-icon">🔁</div>
+        <div class="output-label">RNG / Syngas</div>
+        <span class="output-tag">Grid-injectable</span><br>
+        <span class="output-tag" style="margin-top:4px">RFS + LCFS credits</span>
+      </div>
+      <div class="output">
+        <div class="output-icon">💧</div>
+        <div class="output-label">Green H₂</div>
+        <span class="output-tag">€3–6/kg</span><br>
+        <span class="output-tag" style="margin-top:4px">99.999% purity</span>
+      </div>
+      <div class="output">
+        <div class="output-icon">✈️</div>
+        <div class="output-label">SAF</div>
+        <span class="output-tag">$3–5/gal</span><br>
+        <span class="output-tag" style="margin-top:4px">Offtake partner secured</span>
+      </div>
+    </div>
+
+    <!-- TECHNOLOGY BAR -->
+    <div class="tech-bar">
+      <div class="tech-bar-icon">⚡</div>
+      <div>
+        <div class="tech-bar-label">Why the technology works — submerged arc, not torch-based</div>
+        <p>The plasma gasification failures investors remember (Solena — bankrupt 2018, lower-temperature torch systems) used external arc torches: energy-hungry, unstable at scale. NZP uses <strong>submerged arc technology</strong> — the arc is stabilised inside a molten bath, the same physics as 200+ commercial steel-making furnaces. 10,000°C operating temperature. Feedstock variability irrelevant. 200+ systems deployed globally across Asia, Europe and North America over 25+ years. TRL 8–9 — commercial systems, not lab demos. Validated by US EPA, California IWMB, Los Angeles and Dallas-Fort Worth.</p>
+      </div>
+    </div>
+
+    <!-- PROOF CASE -->
+    <div class="proof">
+      <div class="proof-label">Structure in active development — US coal remediation</div>
+      <p style="font-size:0.9em;color:#166534;line-height:1.65">NZP is in discussion with US coal operators carrying significant ongoing environmental penalty obligations to structure liability transfer agreements. The commercial logic: the operator's financial reserves held against the liability become project working capital. Feedstock acquired at zero cost. Outputs contracted to industrial offtake partners. Operator outcome: open-ended liability capped and removed from the balance sheet.</p>
+      <div class="proof-grid">
+        <div class="proof-item"><strong>Feedstock cost</strong>Zero — liability transfer, operator pays NZP to take it</div>
+        <div class="proof-item"><strong>Working capital</strong>Operator's existing reserves against the liability</div>
+        <div class="proof-item"><strong>Operator outcome</strong>Balance sheet exit · Regulatory exposure eliminated</div>
+      </div>
+    </div>
+
+    <!-- OBJECTIONS -->
+    <p style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#64748b;margin-bottom:10px">Questions operators and investors will ask</p>
+    <div class="objections">
+      <div class="objection">
+        <div class="obj-q">Will regulators accept this?</div>
+        <div class="obj-a">Submerged arc vitrification produces inert, non-leaching slag — classified non-hazardous. NZP's process is validated by US EPA and California IWMB. High-temperature treatment is an established regulatory pathway.</div>
+      </div>
+      <div class="objection">
+        <div class="obj-q">Is the technology proven at scale?</div>
+        <div class="obj-a">200+ commercial systems deployed over 25+ years. PCB destruction in Taiwan. Mixed waste in Korea. TRL 8–9. Not a pilot project — the same supply chain as the global steel industry.</div>
+      </div>
+      <div class="objection">
+        <div class="obj-q">Who funds deployment?</div>
+        <div class="obj-a">The operator's existing reserves held against the liability serve as working capital. NZP's Model 1–3 structure means no capital is committed until commercial viability is proven.</div>
+      </div>
+      <div class="objection">
+        <div class="obj-q">Who owns the risk in 20 years?</div>
+        <div class="obj-a">SPV/JV structure. The liability transfers into the vehicle — it does not remain on the operator's books. NZP takes operational responsibility for the feedstock stream.</div>
+      </div>
+    </div>
+
+    <!-- NEXT STEP -->
+    <div style="background:#0f172a;border-radius:10px;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7dd3fc;margin-bottom:6px">Next step</div>
+        <p style="font-size:0.95em;color:rgba(255,255,255,0.85);line-height:1.6">A no-cost model run using your site data or a representative profile. Output: investor-grade commercial summary, payback modelling, output scenario comparison. No commitment required.</p>
+      </div>
+      <div style="text-align:center;min-width:160px">
+        <div style="font-size:0.78em;color:rgba(255,255,255,0.5);margin-bottom:6px">Contact</div>
+        <div style="font-size:0.9em;font-weight:700;color:#7dd3fc">Mark Evans-Smith</div>
+        <div style="font-size:0.82em;color:rgba(255,255,255,0.6)">Chief Growth Officer</div>
+        <div style="font-size:0.82em;color:rgba(255,255,255,0.6);margin-top:2px">Net Zero Platforms</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand">Net Zero Platforms</div>
+    <div class="footer-contact">
+      <a href="https://www.netzeroplatforms.com">netzeroplatforms.com</a> &nbsp;·&nbsp;
+      info@netzeroplatforms.com &nbsp;·&nbsp;
+      Tennessee · Birmingham · Brussels
+    </div>
+    <div class="footer-note">Confidential — prepared for discussion purposes only. Commercial figures are modelled projections. Details of active discussions available under NDA.</div>
+  </div>
+
+</div>
+</body>
+</html>
