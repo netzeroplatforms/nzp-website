@@ -571,6 +571,11 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
   .footer-top { grid-template-columns: 1fr !important; }
 }
 
+/* ═══ DIFFERENTIATOR ALIGNMENT FIX ═══ */
+@media (max-width: 768px) {
+  .differentiator { margin-left: 8px !important; }
+}
+
 /* ═══ INLINE GRID FIX — responsive classes for inline-style two-col grids ═══ */
 .resp-grid-2col {
   display: grid;
@@ -747,7 +752,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
     <p class="hero-note">Any material. Any composition. Modelled first. Delivered with control.</p>
 
     <!-- Differentiator statement -->
-    <div style="margin:32px 0 0;padding-top:28px;border-top:1px solid rgba(255,255,255,0.12);max-width:660px">
+    <div class="differentiator" style="margin:32px 0 0;padding-top:28px;border-top:1px solid rgba(255,255,255,0.12);max-width:660px">
       <h2 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:white;letter-spacing:-0.5px;line-height:1.2;margin:0 0 18px">Most technologies process waste.<br><span style="color:#60a5fa">We model it first.</span></h2>
       <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:10px">
         <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.55"><span style="color:#22c55e;font-weight:900;flex-shrink:0;margin-top:1px">✓</span> Every deployment starts with your real feedstock data — not assumptions, not industry averages.</li>
