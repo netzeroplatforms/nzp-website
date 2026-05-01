@@ -240,7 +240,7 @@ h1.hero-h1 em{font-style:normal;color:#7dd3fc}
 }
 
 /* ───────────────────────── SECTIONS ───────────────────────── */
-.section{padding:96px 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.section{padding:96px 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
 .section-inner{max-width:1100px;margin:0 auto;width:100%}
 .section-tag{
   display:inline-block;background:var(--blue-light);
@@ -261,8 +261,10 @@ h2.section-h2{
 .alt-bg{background:var(--slate-50)}
 .dark-bg{background:linear-gradient(160deg,var(--blue-xdark) 0%,var(--blue) 60%,#2196d4 100%)}
 .dark-bg .section-h2{color:white}
-.dark-bg .section-sub{color:rgba(255,255,255,.6)}
+.dark-bg .section-sub{color:rgba(255,255,255,.75)}
 .dark-bg .section-tag{background:rgba(29,111,191,.18);color:rgba(125,211,252,.9);border-color:rgba(29,111,191,.35)}
+.dark-bg h3,.dark-bg h4,.dark-bg p,.dark-bg li{color:rgba(255,255,255,.85)}
+.dark-bg strong{color:white}
 
 /* ───────────────────────── INTRO STRIP ───────────────────────── */
 .intro-strip{background:var(--blue);padding:48px 40px}
@@ -451,7 +453,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
 
 /* ───────────────────────── UTILITIES ───────────────────────── */
 .text-center{text-align:center}
-.text-center .section-sub{margin-left:auto;margin-right:auto}
+.text-center .section-sub{margin-left:0;margin-right:0;text-align:left}
 .divider{width:48px;height:3px;background:var(--blue);border-radius:2px;margin:20px 0 24px}
 .divider.center{margin-left:auto;margin-right:auto}
 
