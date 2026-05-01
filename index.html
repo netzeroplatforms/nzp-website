@@ -52,11 +52,12 @@ h1,h2,h3,h4,h5,h6,
 .section-h2{text-align:left}
 .section-sub{text-align:left;margin-left:0;margin-right:0}
 .text-center .section-tag,.text-center .section-h2,.text-center .section-sub{text-align:left;margin-left:0;margin-right:0}
+.hero p,.hero-sub,.section-inner>p,.intro-inner p{text-align:left}
 
 
 /* ───────────────────────── NAV ───────────────────────── */
 
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1280px;margin:0 auto;padding:0 24px;height:72px;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1280px;margin:0 0;padding:0 24px;height:72px;}
 .nav-mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;}
 .nav-mobile-toggle span{display:block;width:24px;height:2px;background:#334155;border-radius:2px;}
 
@@ -165,7 +166,7 @@ h1.hero-h1 em{font-style:normal;color:#7dd3fc}
 .chrome-dot{width:10px;height:10px;border-radius:50%}
 .chrome-title{
   margin-left:12px;font-size:11.5px;font-weight:600;
-  color:var(--slate-500);flex:1;text-align:center;letter-spacing:0.01em;
+  color:var(--slate-500);flex:1;text-align:left;letter-spacing:0.01em;
 }
 .screen-body{
   background:var(--white);display:grid;
@@ -228,7 +229,7 @@ h1.hero-h1 em{font-style:normal;color:#7dd3fc}
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .trust-inner{
-  max-width:1100px;margin:0 auto;
+  max-width:1100px;margin:0 0;
   display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between;
 }
 .trust-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);white-space:nowrap}
@@ -265,9 +266,9 @@ h2.section-h2{
 
 /* ───────────────────────── INTRO STRIP ───────────────────────── */
 .intro-strip{background:var(--blue);padding:48px 40px}
-.intro-inner{max-width:900px;margin:0 auto;text-align:center}
+.intro-inner{max-width:900px;margin:0 auto;text-align:left}
 .intro-strip h2{font-size:clamp(22px,3vw,34px);font-weight:700;color:white;letter-spacing:-0.5px;line-height:1.25;margin-bottom:16px}
-.intro-strip p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.7;max-width:680px;margin:0 auto}
+.intro-strip p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.7;max-width:680px;margin:0 0}
 
 /* ───────────────────────── PHASE CARDS ───────────────────────── */
 .phases-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)}
@@ -314,7 +315,7 @@ h2.section-h2{
 
 /* ───────────────────────── STATS ───────────────────────── */
 .stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;border-radius:var(--radius-lg);overflow:hidden;background:var(--slate-200);box-shadow:var(--shadow-sm)}
-.stat{background:var(--white);padding:32px 20px;text-align:center}
+.stat{background:var(--white);padding:32px 20px;text-align:left}
 .stat-val{font-size:32px;font-weight:900;color:var(--blue);letter-spacing:-1.5px;line-height:1;margin-bottom:8px}
 .stat-label{font-size:11px;color:var(--slate-500);text-transform:uppercase;letter-spacing:.06em;font-weight:600;line-height:1.4}
 
@@ -388,7 +389,7 @@ h2.section-h2{
   content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse 50% 70% at 50% 50%,rgba(29,111,191,.2) 0%,transparent 70%);
 }
-.cta-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
+.cta-inner{max-width:680px;margin:0 0;position:relative;z-index:1}
 .cta-section h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;color:white;letter-spacing:-1px;margin-bottom:18px;line-height:1.15}
 .cta-section p{font-size:17px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:36px}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -632,8 +633,8 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
 }
 
 /* ───────────────────────── IMPACT COUNTERS ───────────────────────── */
-.impact-band{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 55%,#0d5a8e 100%);padding:80px 40px;text-align:center}
-.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1100px;margin:0 auto}
+.impact-band{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 55%,#0d5a8e 100%);padding:80px 40px;text-align:left}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1100px;margin:0 0}
 .impact-number{font-size:clamp(40px,8vw,72px);font-weight:900;color:white;line-height:1;letter-spacing:-3px}
 .impact-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.4}
 @media(max-width:768px){.impact-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
@@ -641,9 +642,9 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
 
 /* ───────────────────────── TEAM SECTION ───────────────────────── */
 .resp-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.team-card{background:var(--white);border:1px solid var(--slate-200);border-radius:var(--radius-lg);padding:28px;text-align:center;transition:all 0.2s}
+.team-card{background:var(--white);border:1px solid var(--slate-200);border-radius:var(--radius-lg);padding:28px;text-align:left;transition:all 0.2s}
 .team-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.team-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;margin:0 auto 16px;flex-shrink:0}
+.team-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;margin:0 0 16px;flex-shrink:0}
 .team-name{font-size:16px;font-weight:700;color:var(--slate-900);margin-bottom:4px;letter-spacing:-0.3px}
 .team-role{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:16px}
 .team-bio-item{font-size:12.5px;color:var(--slate-500);line-height:1.55;margin-bottom:5px;text-align:left}
@@ -657,7 +658,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
   .impact-number{letter-spacing:-1px !important;}
   /* Partner pills — wrap naturally */
   .trust-inner{flex-wrap:wrap !important;gap:8px !important;justify-content:center !important;}
-  .partner-pill{white-space:normal !important;text-align:center !important;font-size:11px !important;padding:8px 14px !important;}
+  .partner-pill{white-space:normal !important;text-align:left !important;font-size:11px !important;padding:8px 14px !important;}
   /* FAQ */
   .faq-q{font-size:14px !important;padding:16px 0 !important;}
   /* ESG cards */
@@ -740,8 +741,8 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
     <div class="hero-tag"><span class="hero-tag-dot"></span>Waste to Value Technology &nbsp;·&nbsp; Model First. Process Second. Deliver with Certainty.</div>
     <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.18);border:1px solid rgba(245,158,11,0.4);border-radius:6px;padding:6px 14px;margin-bottom:20px;font-size:12px;font-weight:600;color:#fde68a;letter-spacing:0.02em"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#f59e0b;flex-shrink:0"></span>UK ETS expands to EfW — January 2026. Carbon liability is already on the clock.</div>
     <h1 class="hero-h1">From waste liability to <em>engineered, bankable outcome.</em></h1>
-    <p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.75);line-height:1.7;max-width:660px;margin:20px auto 0;text-align:center">Our platform models your feedstock, quantifies its value across multiple offtake pathways, and directly configures our system to deliver predictable outputs—before any capital is committed.</p>
-    <p style="font-size:14px;font-weight:700;color:#60a5fa;letter-spacing:-0.1px;margin:12px 0 0;text-align:center">Real data in. Clear commercial answers out.</p>
+    <p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.75);line-height:1.7;max-width:660px;margin:20px 0 0;text-align:left">Our platform models your feedstock, quantifies its value across multiple offtake pathways, and directly configures our system to deliver predictable outputs—before any capital is committed.</p>
+    <p style="font-size:14px;font-weight:700;color:#60a5fa;letter-spacing:-0.1px;margin:12px 0 0;text-align:left">Real data in. Clear commercial answers out.</p>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0 36px;text-align:left">
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;backdrop-filter:blur(4px)">
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#60a5fa;margin-bottom:8px">Waste Operators</div>
@@ -891,7 +892,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
 
 <!-- ═══════════ WHY DIFFERENT ═══════════ -->
 <section style="background:linear-gradient(160deg,#0c4a6e 0%,#0d5a8e 100%);padding:64px 24px;border-bottom:1px solid rgba(255,255,255,0.08)">
-  <div style="max-width:680px;margin:0 auto;text-align:center">
+  <div style="max-width:680px;margin:0 0;text-align:left">
     <h2 style="font-size:clamp(24px,3.5vw,36px);font-weight:900;color:white;letter-spacing:-0.8px;line-height:1.2;margin:0 0 28px">Most technologies process waste.<br><span style="color:#60a5fa">We model it first.</span></h2>
     <ul style="list-style:none;padding:0;margin:0 0 32px;text-align:left;display:inline-block;max-width:560px">
       <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;font-size:15px;color:rgba(255,255,255,0.85);line-height:1.6"><span style="color:#22c55e;font-weight:900;flex-shrink:0;margin-top:2px">✓</span> Every deployment starts with your real feedstock data — not assumptions, not industry averages.</li>
