@@ -703,6 +703,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
     <a href="/" class="nav-link">Home</a>
     <a href="/platform.html" class="nav-link">Platform</a>
     <a href="/output-pathways.html" class="nav-link">Output Pathways</a>
+    <a href="/sidecar.html" class="nav-link">Sidecar Model</a>
     <a href="/why.html" class="nav-link">Why Plasma</a>
     <a href="/leadership.html" class="nav-link">Leadership</a>
     <a href="/faq.html" class="nav-link">FAQ</a>
@@ -774,7 +775,7 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
         <div class="hiw-panel">
           <div class="hiw-panel-title">Commercial Summary — 850 TPD Mixed Commercial Waste</div>
           <div class="hiw-data-row"><span class="hiw-data-key">Annual gate fee revenue</span><span class="hiw-data-val green">£43.7M</span></div>
-          <div class="hiw-data-row"><span class="hiw-data-key">H₂ output (99.999% purity)</span><span class="hiw-data-val blue">22,300 tonnes/yr</span></div>
+          <div class="hiw-data-row"><span class="hiw-data-key">H₂ output (configured to spec — Industrial / Chemical / UHP)</span><span class="hiw-data-val blue">22,300 tonnes/yr</span></div>
           <div class="hiw-data-row"><span class="hiw-data-key">SAF offtake</span><span class="hiw-data-val blue">Partner secured</span></div>
           <div class="hiw-data-row"><span class="hiw-data-key">Carbon credits (est.)</span><span class="hiw-data-val green">£8.1M/yr eligible</span></div>
           <div class="hiw-data-row"><span class="hiw-data-key">Phase 1 capex</span><span class="hiw-data-val">€15–25M modular</span></div>
@@ -843,8 +844,67 @@ footer{background:linear-gradient(160deg,var(--slate-900) 0%,var(--blue-xdark) 8
       </div>
     </div>
 
+    <!-- Operating Envelope -->
+    <div style="margin-top:64px">
+      <div style="text-align:center;margin-bottom:32px">
+        <span class="section-tag">Operating Envelope</span>
+        <h3 style="font-size:26px;font-weight:800;color:var(--slate-900);letter-spacing:-0.5px;margin:14px 0 8px;line-height:1.25">The industrial buyer's spec sheet.</h3>
+        <p style="font-size:15px;color:var(--slate-500);line-height:1.7;max-width:680px;margin:0 auto">The same operating envelope that underwrites 200+ submerged arc deployments in global steelmaking. Reformer-grade reliability, modelled conservatively, delivered to spec.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px">
+        <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-md);padding:22px 18px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:8px">Availability</div>
+          <div style="font-size:30px;font-weight:800;color:var(--slate-900);letter-spacing:-1px;line-height:1">&gt;95%</div>
+          <div style="font-size:12px;color:var(--slate-500);margin-top:6px;line-height:1.5">Industrial uptime target — same as global EAF benchmark</div>
+        </div>
+        <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-md);padding:22px 18px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:8px">Cycle time</div>
+          <div style="font-size:30px;font-weight:800;color:var(--slate-900);letter-spacing:-1px;line-height:1">&lt;45 min</div>
+          <div style="font-size:12px;color:var(--slate-500);margin-top:6px;line-height:1.5">Tap-to-tap, matching modern EAF cadence</div>
+        </div>
+        <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-md);padding:22px 18px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:8px">Energy demand</div>
+          <div style="font-size:30px;font-weight:800;color:var(--slate-900);letter-spacing:-1px;line-height:1">300–500 <span style="font-size:14px;font-weight:600;color:var(--slate-500)">kWh/t</span></div>
+          <div style="font-size:12px;color:var(--slate-500);margin-top:6px;line-height:1.5">Modelled high / avg / low — NZP defaults to conservative high</div>
+        </div>
+        <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-md);padding:22px 18px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--slate-500);margin-bottom:8px">Electrode consumption</div>
+          <div style="font-size:30px;font-weight:800;color:var(--slate-900);letter-spacing:-1px;line-height:1">1.5–2.5 <span style="font-size:14px;font-weight:600;color:var(--slate-500)">kg/t</span></div>
+          <div style="font-size:12px;color:var(--slate-500);margin-top:6px;line-height:1.5">Same envelope as global steel EAF supply chain</div>
+        </div>
+      </div>
+
+      <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:var(--radius-lg);padding:28px 32px">
+        <div style="font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:14px">Hydrogen purity — configured, not approximated</div>
+        <p style="font-size:14px;color:var(--slate-600);line-height:1.7;margin:0 0 18px">We do not lead with a single purity headline. We model your offtake spec, then configure the membrane and pressure-swing adsorption (PSA) train to deliver it. The CAPEX and OPEX deltas are surfaced in the modelling run before any commitment.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+          <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-sm);padding:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate-500);margin-bottom:4px">Industrial</div>
+            <div style="font-size:18px;font-weight:800;color:var(--slate-900)">95–99.5%</div>
+            <div style="font-size:11px;color:var(--slate-500);margin-top:4px;line-height:1.4">Welding, metallurgy, chemical manufacturing</div>
+          </div>
+          <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-sm);padding:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate-500);margin-bottom:4px">Chemical (3.0)</div>
+            <div style="font-size:18px;font-weight:800;color:var(--slate-900)">99.9%</div>
+            <div style="font-size:11px;color:var(--slate-500);margin-top:4px;line-height:1.4">Ammonia production, refining</div>
+          </div>
+          <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-sm);padding:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate-500);margin-bottom:4px">Fuel-cell (ISO 14687)</div>
+            <div style="font-size:18px;font-weight:800;color:var(--slate-900)">≥99.97%</div>
+            <div style="font-size:11px;color:var(--slate-500);margin-top:4px;line-height:1.4">FCEV, stationary fuel cells</div>
+          </div>
+          <div style="background:white;border:1px solid var(--slate-200);border-radius:var(--radius-sm);padding:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate-500);margin-bottom:4px">UHP (5.0)</div>
+            <div style="font-size:18px;font-weight:800;color:var(--slate-900)">99.999%</div>
+            <div style="font-size:11px;color:var(--slate-500);margin-top:4px;line-height:1.4">Lab, specialty chemicals</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--slate-500);margin-top:14px;line-height:1.6">Industrial → Chemical grade adds approximately <strong style="color:var(--slate-700)">$0.20–0.70/kg</strong> OPEX and <strong style="color:var(--slate-700)">$0.75–1.0M</strong> CAPEX (membrane + PSA). All deltas modelled before commitment.</div>
+      </div>
+    </div>
+
     <!-- What is UHTMG -->
-    <div class="resp-grid-2col-mt">
+    <div class="resp-grid-2col-mt" style="margin-top:64px">
       <div>
         <span class="section-tag amber">What Is UHTMG</span>
         <div style="margin:16px 0 6px">
